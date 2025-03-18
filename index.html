@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>料金計算</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>一般家庭版　計算アプリ</h1>
+
+    <!-- 入力フォームのコンテナ -->
+    <div class="form-container">
+        
+        <!-- 料金プラン -->
+        <div class="form-group">
+            <label for="plan">料金プラン</label>
+            <select id="plan">
+                <option value="1">№1、№51(一般料金)</option>
+                <option value="3">№3、№53(一般料金移行)</option>
+                <option value="4">№4(市役所)</option>
+                <option value="8">№8(都市ガス対策)</option>
+                <option value="9">№9(光商会対策)</option>
+                <option value="10">№10(1600+530)</option>
+            </select>
+        </div>
+
+        <!-- 使用量 -->
+        <div class="form-group">
+            <label for="usage">使用量 (㎥)</label>
+            <input type="number" id="usage" min="0" step="0.1">
+        </div>
+
+        <!-- 使用日数 -->
+        <div class="form-group">
+            <label for="days">使用日数</label>
+            <input type="number" id="days" min="1">
+        </div>
+
+    </div>
+
+    <button onclick="performCalculation()">計算する</button>
+
+    <div id="result">
+        <p id="baseRate"></p>
+        <p id="consumptionRate"></p>
+        <p id="subtotal"></p>
+        <p id="tax"></p>
+        <div class="total-display">
+            <p id="total"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

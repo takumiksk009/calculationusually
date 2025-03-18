@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* 入力フォーム全体を横並びに */
+.form-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* 項目間の間隔 */
+    flex-wrap: wrap;
+}
+
+/* 各入力項目 */
+.form-group {
+    display: flex;
+    flex-direction: column; /* ラベルを上、入力欄を下 */
+    align-items: center;
+    gap: 5px;
+}
+
+/* ラベルのデザイン */
+label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 入力欄 */
+input, select {
+    font-size: 18px;
+    padding: 8px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* 計算ボタン */
+button {
+    font-size: 20px;
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* 計算結果の表示 */
+#result {
+    margin-top: 30px;
+    font-size: 22px;
+}
+
+/* 合計金額の特別表示 */
+.total-display {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffcc00;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+#total {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
